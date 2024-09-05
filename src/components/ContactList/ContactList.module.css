@@ -1,0 +1,12 @@
+.list{
+    display: flex;
+    padding:0;
+    flex-wrap: wrap;
+    list-style: none;
+    color: black;
+   
+}
+
+.formContact{
+    display: block;
+}

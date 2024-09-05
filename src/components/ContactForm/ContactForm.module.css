@@ -1,0 +1,30 @@
+.contactForm {
+  display: block;
+  padding: 10px;
+  margin-bottom: 10px;  
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 300px;
+}
+.inputContainer {
+  display: block;
+padding: 10px;
+}
+.nameInput {
+  display: block;
+  padding: 10px;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.error {
+  color: rgb(231, 8, 8);
+}
+.buttonSubmit {
+  display: block;
+  padding: 10px;
+  background-color: lightgray;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 0 auto;
+}

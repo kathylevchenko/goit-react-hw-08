@@ -1,0 +1,11 @@
+.mainContainer {
+ display: flex; 
+  flex-direction: column;
+  gap: 8px;
+padding-left: 10px;
+margin: 10px;
+}
+.headerText {
+  color: rgb(74, 74, 75);
+}
+

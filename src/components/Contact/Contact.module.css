@@ -1,0 +1,31 @@
+.listItemContainer {
+  display: block;
+   gap: 10px; 
+   line-height: 1.2em;
+   font-weight: 500;
+   width: 200px;
+  }
+  .spanItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: black;
+    font-size: 16px;
+  }
+  .deleteButton {
+    padding: 10px;
+    background-color: lightgray;
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+
+  .fullList{
+    display: flex;
+   padding: 10px;
+   border: 1px solid black;
+   border-radius: 5px;
+   margin: 10px;
+   justify-content: space-between;
+   align-items: center;
+   height: 80px;
+  }
