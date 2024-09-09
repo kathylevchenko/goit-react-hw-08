@@ -57,7 +57,7 @@ const LoginForm = () => {
             className={css.nameInput}
               type="password"
               name="password"
-              placeholder=""
+              placeholder="Enter password..."
             />
             <ErrorMessage
               className={css.errorText}

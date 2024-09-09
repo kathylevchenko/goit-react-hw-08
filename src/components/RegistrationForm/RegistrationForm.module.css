@@ -1,8 +1,9 @@
 .form {
-width: 600px;
+width: 500px;
    border: 1px solid  black;
    border-radius: 5px;
    padding: 20px;
+   margin: 0 auto;
 }
 
 .label {

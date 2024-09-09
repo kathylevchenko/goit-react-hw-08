@@ -12,7 +12,7 @@ const ContactsPage = () => {
   }, [dispatch]);
   return (
     <div>
-      <h2>ContactsPage</h2>
+      <h2>Contacts</h2>
       <ContactForm />
       <SearchBox />
       <ContactList />

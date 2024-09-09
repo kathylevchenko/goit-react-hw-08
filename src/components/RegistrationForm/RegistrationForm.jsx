@@ -1,7 +1,5 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
-// import { useId } from "react";
 import * as Yup from "yup";
-// import toast from "react-hot-toast";
 import { useDispatch } from "react-redux";
 import { register } from "../../redux/auth/operations";
 import css from "./RegistrationForm.module.css";
@@ -43,7 +41,7 @@ export default function RegistrationForm() {
         <div className={css.fieldStyle}>
           <label className={css.label}>
             Username
-            <Field   className={css.nameInput} type="text" name="name" />
+            <Field   className={css.nameInput} type="text" name="name" placeholder="Enter name..."/>
             <ErrorMessage
               className={css.errorText}
               name="name"
@@ -52,7 +50,7 @@ export default function RegistrationForm() {
           </label>
           <label className={css.label}>
             Email
-            <Field  className={css.nameInput} type="email" name="email" />
+            <Field  className={css.nameInput} type="email" name="email"  placeholder="example@gmail.com"/>
             <ErrorMessage
               className={css.errorText}
               name="email"
@@ -61,7 +59,7 @@ export default function RegistrationForm() {
           </label>
           <label className={css.label}>
             Password
-            <Field  className={css.nameInput} type="password" name="password" />
+            <Field  className={css.nameInput} type="password" name="password" placeholder="Enter password..."/>
             <ErrorMessage
               className={css.errorText}
               name="password"
