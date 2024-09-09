@@ -1,8 +1,9 @@
 import { Formik, ErrorMessage, Field, Form } from "formik";
 import { useDispatch } from "react-redux";
-import { addContact } from "../../redux/contactsOps";
+import { addContact } from "../../redux/contacts/operations";
 import css from "./ContactForm.module.css";
 import * as Yup from "yup";
+import toast from "react-hot-toast";
 
 
 
@@ -18,16 +19,25 @@ export default function ContactForm (){
         .max(50, "Too Long!")
         .required("Required"),
       phone: Yup.string()
-        .min(9, "Too Short!")
+        .min(6, "Too Short!")
         .max(12, "Too Long!")
         .required("Required"),
     });
   
 
-    const handleSubmit = (newContact, actions) => {
-      dispatch(addContact(newContact));
+const handleSubmit = (values, actions) => {
+  const { name, phone } = values;
+  dispatch(addContact({ name, phone }))
+    .unwrap()
+    .then(() => {
+      toast.success("Contact added successfully🎉");
       actions.resetForm();
-    }
+    })
+    .catch(() => {
+      toast.error("Contact add failed!");
+    });
+};
+
     return (
       <Formik
        initialValues={initialValues}
