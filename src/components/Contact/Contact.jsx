@@ -7,7 +7,7 @@ import toast from "react-hot-toast";
 
 
 
-export default function Contact({ id, name, phone}){
+export default function Contact({ id, name, number}){
   const dispatch = useDispatch();
   const onDeleteContact=(id)=>{
 dispatch(deleteContact(id))
@@ -23,7 +23,7 @@ dispatch(deleteContact(id))
               <FaUser />{name} </p>
             <p className={css.spanItem}> 
               <FaPhone />
-              {phone}</p>
+              {number}</p>
           </div>
           <button
             className={css.deleteButton}

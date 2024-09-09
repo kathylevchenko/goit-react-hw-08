@@ -11,14 +11,14 @@ export default function ContactForm (){
   const dispatch = useDispatch();
   const initialValues = {
     name: "",
-    phone: "",
+    number: "",
   };
     const contactsSchema = Yup.object().shape({
       name: Yup.string()
         .min(3, "Too Short!")
         .max(50, "Too Long!")
         .required("Required"),
-      phone: Yup.string()
+      number: Yup.string()
         .min(6, "Too Short!")
         .max(12, "Too Long!")
         .required("Required"),
@@ -26,8 +26,8 @@ export default function ContactForm (){
   
 
 const handleSubmit = (values, actions) => {
-  const { name, phone } = values;
-  dispatch(addContact({ name, phone }))
+  const { name, number } = values;
+  dispatch(addContact({ name, number }))
     .unwrap()
     .then(() => {
       toast.success("Contact added successfully🎉");
@@ -60,9 +60,9 @@ const handleSubmit = (values, actions) => {
             <Field
               className={css.nameInput}
               type="tel"
-              name="phone"
+              name="number"
             />
-            <ErrorMessage className={css.error} name="phone" component="span" />
+            <ErrorMessage className={css.error} name="number" component="span" />
           </div>
           <button className={css.buttonSubmit} type="submit">
             Add contact
