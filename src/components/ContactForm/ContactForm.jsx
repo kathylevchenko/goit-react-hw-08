@@ -25,17 +25,17 @@ export default function ContactForm (){
     });
   
 
-const handleSubmit = (values, actions) => {
+const handleSubmit = (values,actions) => {
   const { name, number } = values;
   dispatch(addContact({ name, number }))
     .unwrap()
     .then(() => {
       toast.success("Contact added successfully🎉");
-      actions.resetForm();
     })
     .catch(() => {
       toast.error("Contact add failed!");
     });
+    actions.resetForm();
 };
 
     return (
